@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <title>Curium Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="results.css">
+</head>
+<body class="results-page">
+  <header class="results-topbar"><a class="brand" href="index.html"><span class="brand-icon">▤</span><span class="wordmark">Curium</span></a><a class="back-link" href="index.html">← Back to your learning space</a></header>
+  <main class="results-shell">
+    <section class="results-intro"><span class="eyebrow" id="results-context">YOUR LEARNING SPACE</span><h1>Let’s make sense of it.</h1><p>Read clear topic explanations first. Open access papers and Nigerian curriculum sources are there when you need them.</p></section>
+    <form id="results-search" class="results-search"><label class="field">Topic or question<input id="results-query" required></label><div class="refinement-grid"><label class="field">Course or subject<input id="results-subject" placeholder="Add a course or subject"></label><label class="field">What do you need?<select id="results-goal"><option value="overview">A clear overview</option><option value="coursework">Coursework and study material</option><option value="exam">Exam preparation</option><option value="research">Academic research</option></select></label></div><div class="exam-options" id="exam-options"><span>Include exam resources</span><label><input type="checkbox" value="WAEC"> WAEC</label><label><input type="checkbox" value="NECO"> NECO</label><label><input type="checkbox" value="JAMB"> JAMB / UTME</label></div><button class="primary-button" type="submit">Update results →</button></form>
+    <nav class="research-modes" aria-label="Choose how to search"><button type="button" id="mode-ai" aria-pressed="true">Ask AI</button><button type="button" id="mode-curriculum" aria-pressed="false">Search Nigerian curriculum</button></nav>
+    <section class="answer-section"><div class="results-heading"><div><span class="eyebrow" id="answer-eyebrow">ASK AI</span><h2 id="result-count">Finding a useful explanation…</h2></div><button class="text-button" id="save-search">Save this search <span>＋</span></button></div>
+      <div id="result-message" class="result-message" aria-live="polite"></div>
+      <div id="answer-thread" class="answer-thread" aria-live="polite"></div>
+      <div class="follow-up-prompts"><span>Want to go further?</span><button type="button" data-followup="Explain this more simply">Explain it simply</button><button type="button" data-followup="How does this work?">How does it work?</button><button type="button" data-followup="Give me an example">Give me an example</button></div>
+      <form id="followup-form" class="followup-form"><label class="field" for="followup-input">Ask a follow-up question<input id="followup-input" placeholder="What would you like to know next?"></label><button class="primary-button" type="submit">Ask →</button></form>
+    </section>
+    <button class="secondary-button" id="go-further" type="button">Go further · show related sources and papers</button>
+    <section class="more-results" id="more-results" hidden><div class="results-heading"><div><span class="eyebrow">RELATED SOURCES</span><h2>Explore more results</h2></div></div><section class="result-grid" id="result-list"></section>
+      <section class="research-more" id="research-more" hidden><div class="results-heading"><div><span class="eyebrow">ACADEMIC RESEARCH</span><h2>Open access papers</h2></div></div><div class="result-grid" id="research-list"></div></section><button class="secondary-button" id="show-papers" type="button">Show research papers</button></section>
+    <details class="curriculum-details"><summary>Check the official Nigerian curriculum for this topic</summary><section class="suggestion-panel" id="curriculum-suggestion"><div><span class="eyebrow">OFFICIAL CURRICULUM</span><h2 id="curriculum-title">Suggested curriculum</h2><p id="curriculum-copy">Official curriculum and course guidance will appear here.</p></div><a id="curriculum-link" href="https://www.nerdc.gov.ng/" target="_blank" rel="noopener">Open curriculum ↗</a></section><div id="official-list" class="official-list"></div></details>
+    <section class="follow-up"><span class="eyebrow">A GOOD NEXT STEP</span><h2>Want to focus your results?</h2><p>Change the course or choose an exam above, then update your results. Save this search to return to it later.</p></section>
+  </main>
+  <script src="resources.js"></script>
+  <script src="results.js"></script>
+</body>
+</html>
